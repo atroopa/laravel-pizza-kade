@@ -21,6 +21,7 @@
         @endfor --}}
 
 
+        <p>name : {{ $name }} - age: {{$age}}</p>
 
         @foreach ($pizzas as $item)
             <p>{{ $item['type'] }}  -- {{ $item['crust'] }} -- {{ $item['price'] }}</p>   

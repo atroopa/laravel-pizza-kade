@@ -16,5 +16,15 @@ Route::get('/pizza', function () {
         ["type" => "meat and mashroom"  ,"crust"=>"garlic",     "price" => 94]
     ];
 
-    return view('pizzas', ["pizzas" => $pizzas]);
+    return view('pizzas', [
+        "pizzas" => $pizzas,
+        "name"   => request('name'),
+        "age"    => request('age')
+    ]);
+});
+
+
+Route::get('/pizza/{id}', function ($id) {
+
+    return view('details', ['id' => $id]);
 });
