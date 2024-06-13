@@ -15,10 +15,9 @@
     </head>
     <body>
        <div class="flex flex-col items-center justify-center">
-        <h3 class="text-2xl mt-10 font-bold">Pizza List</h3>
+        <h3 class="text-2xl mt-10 font-bold text-red-900">Pizza List</h3>
+        <p>{{ $type }} - {{ $crust }} - {{$price}}</p>
     </div>
-
-    
 
     </body>
 </html>
