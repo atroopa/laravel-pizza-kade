@@ -21,10 +21,10 @@
         @endfor --}}
 
 
-        <p>name : {{ $name }} - age: {{$age}}</p>
+        {{-- <p>name : {{ $name }} - age: {{$age}}</p> --}}
 
         @foreach ($pizzas as $item)
-            <p>{{ $item['type'] }}  -- {{ $item['crust'] }} -- {{ $item['price'] }}</p>   
+            <p>{{ $item->name }}  -- {{ $item->type }} -- {{ $item->base }}</p>   
         @endforeach
 
     </div>
