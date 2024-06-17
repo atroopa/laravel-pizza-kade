@@ -6,6 +6,8 @@ use App\Models\Pizza;
 
 class PizzaController extends Controller
 {
+
+
     // My Controller Index --------------------
     public function index(){
 
@@ -14,7 +16,7 @@ class PizzaController extends Controller
         //$pizzas = Pizza::where('type', 'special')->get();
         $pizzas = Pizza::latest()->get();
     
-        return view('pizzas', [
+        return view('pizzas.index', [
             "pizzas" => $pizzas,
             "name"   => request('name'),
             "age"    => request('age')
@@ -23,6 +25,12 @@ class PizzaController extends Controller
 
     // My Controller Show --------------------
     public function show($id){
-        return view('details', ['id' => $id]);
+        return view('pizzas.show', ['id' => $id]);
+    }
+
+
+    // My Controller create --------------------
+    public function create(){
+        return view('pizzas.create');
     }
 }
