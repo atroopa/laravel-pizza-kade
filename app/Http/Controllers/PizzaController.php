@@ -36,4 +36,19 @@ class PizzaController extends Controller
     public function create(){
         return view('pizzas.create');
     }
+
+    // My Controller store --------------------
+    public function store(){
+
+        $pizza = new Pizza();
+
+        $pizza->name = request('name');
+        $pizza->type = request('type');
+        $pizza->base = request('base');
+        $pizza->price = request('price');
+
+        $pizza->save();
+
+        return redirect('/')->with('mssg', 'Thanks for Your Order');
+    }
 }

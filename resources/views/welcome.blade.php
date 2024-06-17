@@ -10,6 +10,8 @@
                    
                         <img class="w-1/2 rounded-xl" src="img/images.png" alt="laravel">
                         <h1 class="font-bold text-3xl mt-3">the tehran best pizzas</h1>
+                        <p class="text-xl text-white">{{ session('mssg') }}</p>
+                        <a href="/pizzas/create" class="text-blue-600 text-xl mt-10 underline">Order the pizza</a>
 
                 </div>
             </div>
