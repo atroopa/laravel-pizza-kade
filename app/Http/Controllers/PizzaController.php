@@ -25,7 +25,10 @@ class PizzaController extends Controller
 
     // My Controller Show --------------------
     public function show($id){
-        return view('pizzas.show', ['id' => $id]);
+
+        $pizza = Pizza::findOrFail($id);
+
+        return view('pizzas.show', ['pizza' => $pizza]);
     }
 
 
