@@ -6,6 +6,12 @@
         <div class="text-red-600">type:  {{ $pizza->type }}</div>
         <div class="text-orange-600">base:  {{ $pizza->base }}</div>
         <div class="text-green-600">price: {{ $pizza->price }}</div>
+        <div class="py-2">Extra toppings:</div>
+        <ul>
+            @foreach ($pizza->toppings as $item)
+                <li>{{ $item }}</li>
+            @endforeach
+        </ul>
         <a   class="text-blue-600 text-lg mt-10"  href="/pizzas"><- Back to All Pizzas</a>
     </div>
 @endsection
