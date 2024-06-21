@@ -1,7 +1,21 @@
 @extends('layouts.layout')
 
 @section('content')
-        
+    
+    @if (Route::has('login'))
+        <div class="flex flex-row items-end justify-end">
+            @auth
+                <a href="{{ url('/home') }}">Home</a>
+            @else
+                <a class="px-2" href="{{ route('login') }}">Login</a>
+
+                @if (Route::has('register'))
+                    <a class="px-2" href="{{ route('register') }}">Register</a>
+                @endif
+            @endauth
+        </div>
+    @endif
+
     <div class="font-sans antialiased dark:bg-black dark:text-white/50">
         <div class="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
             <img id="background" class="absolute -left-20 top-0 max-w-[877px]" src="https://laravel.com/assets/img/welcome/background.svg" />

@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pizza Order Form</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-</head>
-<body>
+@extends('layouts.app')
+   
+
+<div>
+
     <div class="min-h-screen flex items-center justify-center bg-gray-100">
         <form class="bg-white p-6 rounded shadow-md w-full max-w-sm" method="POST" action="/pizzas">
             @csrf
@@ -62,5 +58,5 @@
             </div>
         </form>
     </div>
-</body>
-</html>
+</div>
+
