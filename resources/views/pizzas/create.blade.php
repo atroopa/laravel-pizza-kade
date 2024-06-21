@@ -28,6 +28,17 @@
                     <option value="chicke">Chicken</option>
                     <option value="neopolitan">Neopolitan</option>
                 </select>
+
+                <fieldset class="py-2">
+                    <label>Extra Toppings:</label><br/>
+                    <input type="checkbox" name="toppings[]" value="mushrom"> Mushrom
+                    <input type="checkbox" name="toppings[]" value="garlic"> Garlic
+                    <input type="checkbox" name="toppings[]" value="cheese"> Cheese
+                    <input type="checkbox" name="toppings[]" value="tomato"> Tomato
+                    <input type="checkbox" name="toppings[]" value="olives"> Olives
+                    <input type="checkbox" name="toppings[]" value="pepperoni"> Pepperoni
+                </fieldset>
+
             </div>
 
             <div class="mb-4">
