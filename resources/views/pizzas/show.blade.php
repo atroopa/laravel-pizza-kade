@@ -12,6 +12,13 @@
                 <li>{{ $item }}</li>
             @endforeach
         </ul>
+
+        <form action="/pizzas/{{ $pizza->id }}" method="POST">
+            @csrf
+            @method('DELETE')
+            <button class="px-3 py-2 rounded-xl bg-red-700 text-white mt-3">Delete Order</button>
+        </form>
+
         <a   class="text-blue-600 text-lg mt-10"  href="/pizzas"><- Back to All Pizzas</a>
     </div>
 @endsection
